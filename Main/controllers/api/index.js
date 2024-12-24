@@ -3,6 +3,6 @@ const userRoutes = require('./userRoutes');
 const journalRoutes = require('./journalRoutes');
 
 router.use('/users', userRoutes);
-router.use('/jornals', journalRoutes);
+router.use('/journals', journalRoutes);
 
 module.exports = router;

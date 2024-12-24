@@ -7,12 +7,12 @@
             <a href="/logout">Logout</a>
         {{else}}
             <a href="/login">Login</a>
-            <a href="/signup">Sign Up</a>
+            <a href="/login">Sign Up</a>
         {{/if}}
     </nav>
     <div class="journals">
         {{#each posts}}
-            <div class="jouenal">
+            <div class="journal">
                 <h2><a href="/journals/{{id}}">{{title}}</a></h2>
                 <p>Posted on {{dateCreated}}</p>
             </div>

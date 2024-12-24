@@ -2,15 +2,15 @@
     <h1>Your Profile</h1>
     <nav>
         <a href="/">Home</a>
-        <a href="/logout">Logout</a>
+
     </nav>
-    <div class="journal">
+    <div class="journal-list">
         <h2>Your Journal</h2>
-        {{#each posts}}
+        {{#each journals}}
             <div class="journal">
                 <h3>{{title}}</h3>
                 <p>Posted on {{dateCreated}}</p>
-                <a href="/journals/{{id}}/edit">Edit</a>
+                <a href="/editjournal/{{id}}">Edit</a>
                 <button class="delete-journal" data-id="{{id}}">Delete</button>
             </div>
         {{else}}
@@ -19,3 +19,4 @@
         <button id="new-journal">Add New Journal</button>
     </div>
 </div>
+ <script src="/js/profile.js"></script>

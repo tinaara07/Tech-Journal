@@ -35,4 +35,19 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 
+router.put('/:id', withAuth, async (req, res) => {
+  try {
+    const editJournal = await Journal.update({
+      ...req.body,
+      user_id: req.session.user_id,
+    },{
+      where: {id: req.params.id}
+    });
+
+    res.status(200).json(editJournal);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 module.exports = router;
