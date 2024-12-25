@@ -22,5 +22,4 @@ const delButtonHandler = async (event) => {
   document
     .querySelector('.journal-list')
     .addEventListener('click', delButtonHandler);
-    
   
