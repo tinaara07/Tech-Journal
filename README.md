@@ -75,3 +75,18 @@ Comments on Posts: Logged-in users can leave comments on blog posts. Comments wi
 Session Timeout: Users are logged out after a specified idle period for security.
 Contributing
 If you'd like to contribute to this project, feel free to fork the repository, create a branch for your changes, and submit a pull request. Please ensure that any new features or bug fixes are well-tested.
+
+
+Deployed link
+
+https://tech-journal-ahbv.onrender.com/
+
+
+![image](https://github.com/user-attachments/assets/fb605118-2ad7-4eef-897f-535a10cbc967)
+
+![image](https://github.com/user-attachments/assets/18ead9d2-2928-4088-883a-d1b0bc4d4626)
+
+![image](https://github.com/user-attachments/assets/1e117d3c-8041-4262-8611-dcb58b38c758)
+
+
+
