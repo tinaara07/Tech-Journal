@@ -9,6 +9,7 @@
         {{#each journals}}
             <div class="journal">
                 <h3>{{title}}</h3>
+                <p>{{description}}</p>
                 <p>Posted on {{date_created}}</p>
                 <a href="/editjournal/{{id}}">Edit</a>
                 <button class="delete-journal" data-id="{{id}}">Delete</button>
