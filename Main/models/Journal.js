@@ -12,11 +12,11 @@ Journal.init(
       autoIncrement: true,
     },
     title: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     description: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     date_created: {
@@ -24,9 +24,9 @@ Journal.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    // comment: {
-    //   type: DataTypes.STRING,
-    // },
+    comment: {
+      type: DataTypes.STRING,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

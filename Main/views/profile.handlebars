@@ -1,5 +1,5 @@
 <div class="profile">
-    <h2>Welcome, {{name}}!</h2>
+    <h1>Your Profile</h1>
     <nav>
         <a href="/">Home</a>
 
@@ -9,7 +9,7 @@
         {{#each journals}}
             <div class="journal">
                 <h3>{{title}}</h3>
-                <p>Posted on {{date_created}}</p>
+                <p>Posted on {{dateCreated}}</p>
                 <a href="/editjournal/{{id}}">Edit</a>
                 <button class="delete-journal" data-id="{{id}}">Delete</button>
             </div>

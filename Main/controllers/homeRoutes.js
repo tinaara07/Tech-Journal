@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Journal, User, Comment } = require('../models');
+const { Journal, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -28,35 +28,24 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/journals/:id', async (req, res) => {
+router.get('/journal/:id', async (req, res) => {
   try {
-    const journalData = await Journal.findByPk(req.params.id, {
+    const journalData = await journal.findByPk(req.params.id, {
       include: [
         {
-          model: User, 
+          model: User,
           attributes: ['name'],
-        },
-        {
-          model: Comment, 
-  include:[
-    {
-      model:User,
-      attributes: 
-      ['name']
-    }
-  ]
         },
       ],
     });
 
     const journal = journalData.get({ plain: true });
-console.log(journal.comments)
+
     res.render('journal', {
       ...journal,
       logged_in: req.session.logged_in
     });
   } catch (err) {
-    console.log(err)
     res.status(500).json(err);
   }
 });

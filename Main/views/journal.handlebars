@@ -1,6 +1,6 @@
 <div class="journal">
     <h2>{{title}}</h2>
-    <p>By {{user.name}} on {{date_created}}</p>
+    <p>By {{creator}} on {{dateCreated}}</p>
     <div class="journal-content">
         {{{content}}}
     </div>
@@ -8,12 +8,12 @@
         <h3>Comments</h3>
         {{#each comments}}
             <div class="comment">
-                <p><strong>{{user.name}}</strong> on {{date_created}}: {{{text}}}</p>
+                <p><strong>{{creator}}</strong> on {{dateCreated}}: {{{text}}}</p>
             </div>
         {{/each}}
-        {{#if logged_in}}
+        {{#if loggedIn}}
             <form id="comment-form">
-                <textarea id="comment-text" username="comment" placeholder="Leave a comment..."></textarea>
+                <textarea name="comment" placeholder="Leave a comment..."></textarea>
                 <button type="submit">Submit</button>
             </form>
         {{else}}
@@ -21,5 +21,3 @@
         {{/if}}
     </div>
 </div>
-
-<script src="/js/comment.js"></script>
